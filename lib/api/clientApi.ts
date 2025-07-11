@@ -1,5 +1,5 @@
 import { nextServer } from './api';
-import type { AuthData, User } from '../../types/user';
+import type { AuthData, UpdateUserPayload, User } from '../../types/user';
 import type { Note, NewNotePayload, NotesResponse, FetchNotesParams } from '../../types/note';
 
 
@@ -60,7 +60,7 @@ export const getMe = async (): Promise<User | null> => {
   }
 };
 
-export async function patchUser(data: Partial<User>): Promise<User> {
-  const response = await nextServer.patch('/users/me', data);
-  return response.data;
-}
+export const patchUser = async (data: UpdateUserPayload) => {
+  const res = await nextServer.patch<User>("/users/me", data);
+  return res.data;
+};

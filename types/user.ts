@@ -4,6 +4,11 @@ export interface User {
   username: string;
   avatar: string;
 }
+export type UpdateUserPayload = {
+  username?: string;
+  email?: string;
+  avatar?: string;
+};
 
 export interface AuthData {
   email: string;
