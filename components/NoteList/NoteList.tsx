@@ -18,7 +18,7 @@ const NoteList = ({ notes }: NoteListProps) => {
     isPending,
     variables,
   } = useMutation({
-    mutationFn: (id: number) => deleteNote(id),
+    mutationFn: (id: string) => deleteNote(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["notes"] });
     },

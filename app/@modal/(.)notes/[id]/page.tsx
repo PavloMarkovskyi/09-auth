@@ -7,11 +7,11 @@ import {
 import NotePreviewModal from "./NotePreview.client";
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function NotePreviewModalPage({ params }: PageProps) {
-  const { id } = params;
+  const { id } = await params;
   if (!id || typeof id !== "string") {
     throw new Error("Invalid note ID");
   }

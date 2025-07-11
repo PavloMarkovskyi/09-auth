@@ -1,27 +1,14 @@
 "use client";
 
-import { HydrationBoundary, DehydratedState } from "@tanstack/react-query";
 import { useQuery } from "@tanstack/react-query";
 import { fetchNoteById } from "@/lib/api/clientApi";
 import css from "./NoteDetails.module.css";
 
 interface NoteDetailsClientProps {
   id: string;
-  dehydratedState: DehydratedState;
 }
 
-export default function NoteDetailsClient({
-  id,
-  dehydratedState,
-}: NoteDetailsClientProps) {
-  return (
-    <HydrationBoundary state={dehydratedState}>
-      <NoteDetailsInner id={id} />
-    </HydrationBoundary>
-  );
-}
-
-function NoteDetailsInner({ id }: { id: string }) {
+export default function NoteDetailsClient({ id }: NoteDetailsClientProps) {
   const {
     data: note,
     isLoading,
