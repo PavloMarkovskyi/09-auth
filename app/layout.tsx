@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "NoteHub App - онлайн-замітки",
     description:
       "NoteHub App - це безкоштовний онлайн-сервіс для створення та зберігання заміток.",
-    url: "https://08-zustand-git-main-pavlomarkovskyis-projects.vercel.app/",
+    url: "https://vercel.com/pavlomarkovskyis-projects/09-auth",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

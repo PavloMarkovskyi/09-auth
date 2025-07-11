@@ -18,7 +18,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${capitalizedTag} – Notes | NoteHub`,
       description: `Notes list with tag "${capitalizedTag}" in NoteHub.`,
-      url: `https://08-zustand-git-main-pavlomarkovskyis-projects.vercel.app/notes/filter/${tag}`,
+      url: `https://vercel.com/pavlomarkovskyis-projects/09-auth/notes/filter/${tag}`,
       images: [
         {
           url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
